@@ -1,5 +1,18 @@
 {
-  "image": "opensuse/tumbleweed:latest",
-  "features": {
-  }
+  "name": "OpenSUSE Tumbleweed",
+  "image": "opensuse/tumbleweed",
+  "extensions": [
+    "ms-vscode.cpptools",
+    "ms-python.python",
+    "eamodio.gitlens"
+  ],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "runArgs": [
+    "--cap-add=SYS_PTRACE",
+    "--security-opt",
+    "seccomp=unconfined"
+  ],
+  "postCreateCommand": "zypper install -y python3 pip3 nodejs && pip install attrs black click construct coverage exceptiongroup execnet flake8 iniconfig mccabe mypy-extensions packaging pathspec platformdirs pluggy pybeam pycodestyle pyenchant pyflakes pytest pytest-cov pytest-flake8 pytest-xdist python-magic pyxdg rpm six tomli tomli_w zstandard"
 }
