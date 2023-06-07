@@ -14,5 +14,5 @@
     "--security-opt",
     "seccomp=unconfined"
   ],
-  "postCreateCommand": "zypper install -y python3 pip3 nodejs && pip install attrs black click construct coverage exceptiongroup execnet flake8 iniconfig mccabe mypy-extensions packaging pathspec platformdirs pluggy pybeam pycodestyle pyenchant pyflakes pytest pytest-cov pytest-flake8 pytest-xdist python-magic pyxdg rpm six tomli tomli_w zstandard"
+  "postCreateCommand": "zypper -n install cpio gzip bzip2 xz binutils glibc glibc-32bit glibc-locale python3-python-magic python3-rpm python3-base python3-setuptools python3-pybeam python3-pytest python3-pytest-cov python3-pytest-xdist python3-flake8 python3-flake8-builtins python3-flake8-bugbear python3-flake8-import-order python3-flake8-quotes python3-pyxdg python3-zstandard python3-tomli python3-tomli-w python3-pip rpm-build git && pip install attrs black click construct coverage exceptiongroup execnet flake8 iniconfig mccabe mypy-extensions packaging pathspec platformdirs pluggy pybeam pycodestyle pyenchant pyflakes pytest pytest-cov pytest-flake8 pytest-xdist python-magic pyxdg rpm six tomli tomli_w zstandard"
 }
