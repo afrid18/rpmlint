@@ -49,6 +49,7 @@ class DuplicatesCheck(AbstractCheck):
                 hardlinks[key] = 0
             hardlinks[key] += 1
 
+        breakpoint()
         # process duplicates
         for md5_hash in md5s:
             # obtain the list of the files with the same md5 hash
