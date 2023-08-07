@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [main, opensuse]
+    branches: [main, opensuse, temp]
   pull_request:
     branches: [main, opensuse]
 
