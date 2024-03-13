@@ -63,6 +63,7 @@ PythonFlitMockPackage = get_tested_mock_package(
             'python-requests',
             'python-tomli-w',
             'python310-docutils',
+            'python(abi)',
         ],
     },
 )
@@ -193,10 +194,12 @@ PythonIcecreamPackage = get_tested_mock_package(
     files={
         '/usr/lib/python3.10/site-packages/icecream-2.1.3-py3.10.egg-info/requires.txt': {
             'content': """
+invalid/packagename
 asttokens>=2.0.1
 colorama>=0.3.9
 executing>=0.3.1
 pygments>=2.2.0
+[test_section_for_coverage]
 """,
             'create_dirs': True
         },
@@ -271,5 +274,6 @@ PythonSinglePYCMockPackage = get_tested_mock_package(
         '/usr/lib/python3.9/site-packages/blinker/__pycache__/_saferef.cpython-39.pyc',
         '/usr/lib/python3.9/site-packages/blinker/__pycache__/_utilities.cpython-39.opt-1.pyc',
         '/usr/lib/python3.9/site-packages/blinker/__pycache__/_utilities.cpython-39.pyc',
+        '/usr/lib/package/test.pyc',  # very rare file with .pyc extension for test coverage
     ]
 )
